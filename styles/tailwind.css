@@ -1,0 +1,21 @@
+/* For button animation on approved page */
+@keyframes backgroundColorPalette {
+    0% {
+        background: linear-gradient(90.16deg, #2BB780 0.13%, #215744 99.9%);
+    }
+
+    50% {
+        background: linear-gradient(270deg, #2BB780 0%, #215744 100%);
+    }
+
+    100% {
+        background: linear-gradient(90.16deg, #2BB780 0.13%, #215744 99.9%);
+    }
+}
+
+.animate-approved-button {
+    animation-name: backgroundColorPalette;
+    animation-duration: 2000ms;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+}
