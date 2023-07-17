@@ -64,3 +64,57 @@ export const whatIDo=[
     icon:<BoltIcon  />
   }
 ]
+
+export const eductaion=[
+  {
+    id:1,
+    year:'2016-2020',
+    branch:'CSE',
+    college:'Truba Institute of Engineering and IT',
+    marks:'75.8%',
+    location:'Bhopal'
+  },
+  {
+    id:2,
+    year:'2016',
+    branch:'High School',
+    college:'Silver Bells H.S School',
+    marks:'65.5%',
+    location:'Bhopal'
+  }
+]
+
+export const experience=[
+  {
+    id:1,
+    year:'Oct,2021 - till date',
+    organisation:"OTO Capital",
+    desgination:'SDE-1',
+    techStack:'ReachJS, HTML, CSS, Tailwind, Remix',
+    location:'Bangalore'
+  },
+  {
+    id:2,
+    year:'August,2022 - till date',
+    organisation:"Newton School",
+    desgination:'Mock Interviewer',
+    techStack:'ReachJS, HTML, CSS',
+    location:'Bangalore'
+  },
+  {
+    id:3,
+    year:'March,2021 - August,2021',
+    organisation:"Trukker Technologies",
+    desgination:'SDE-1',
+    techStack:'ReachJS, VueJs',
+    location:'Bangalore'
+  },
+  {
+    id:4,
+    year:'August,2020 - March,2021',
+    organisation:"Newton School",
+    desgination:'Intern',
+    techStack:'ReachJS, HTML, CSS',
+    location:'Bangalore'
+  }
+]

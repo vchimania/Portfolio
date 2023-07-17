@@ -7,7 +7,7 @@ export default function About() {
   return (
     <div className="shadow-2xl border rounded-2xl mt-3">
       <div className="p-10">
-        <div className="text-3xl my-5 font-bold flex items-center">
+        <div className="text-5xl my-5 font-bold flex items-center">
           <div>About Me</div>
           <hr className="border border-pink-500 w-36 ml-3" />
         </div>
