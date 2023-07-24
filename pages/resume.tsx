@@ -1,17 +1,9 @@
 import { eductaion, experience } from "@/src/components/about/helpers";
 import { BookmarkIcon, BriefcaseIcon } from "@heroicons/react/24/solid";
+import ProgressBar from "@ramonak/react-progress-bar";
 import Link from "next/link";
-import { SetStateAction, useState } from "react";
 
 export default function Resume() {
-  const [reactDetails, setReactDetails] = useState("85");
-
-  const handleReactChange = (e: {
-    target: { value: SetStateAction<string> };
-  }) => {
-    setReactDetails(e.target.value);
-  };
-
   return (
     <div className="shadow-2xl border rounded-2xl mt-3">
       <div className="p-10">
@@ -29,13 +21,13 @@ export default function Resume() {
 
             {experience.map((e) => (
               <div className="bg-[#fcf4ff] rounded-2xl p-5" key={e.id}>
-                 <div className="flex justify-between">
-                  <div>{e.year}</div>
-                  <Link href="/works" className="text-blue-500">Click Here</Link>
+                <div className="flex justify-between">
+                <div className="font-bold">{e.organisation}</div>
+                  <div className="text-gray-500 text-sm">{e.year}</div>
                 </div>
-                <div>{e.organisation}</div>
+                
                 <div>{e.desgination}</div>
-                <div>{e.techStack}</div>
+                <div><span className="font-bold">Tech Stack : </span>{e.techStack}</div>
                 <div>{e.location}</div>
               </div>
             ))}
@@ -48,9 +40,11 @@ export default function Resume() {
 
             {eductaion.map((e) => (
               <div className="bg-[#fcf4ff] rounded-2xl p-5" key={e.id}>
-                <div>{e.year}</div>
+                <div className="flex justify-between">
+                <div className="font-bold">{e.college}</div>
+                <div className="text-gray-500 text-sm">{e.year}</div>
+                </div>
                 <div>{e.branch}</div>
-                <div>{e.college}</div>
                 <div>{e.marks}</div>
                 <div>{e.location}</div>
               </div>
@@ -58,67 +52,78 @@ export default function Resume() {
           </div>
         </div>
 
-        <div className="shadow-2xl rounded-2xl">
-          <div className="grid grid-cols-4 gap-4 pt-6">
-            <div className="col-span-2">
-              <div className="text-2xl font-semibold">Working Skill</div>
-              <div>
-                <div className="flex justify-between">
-                  <div>Web Design</div>
-                  <div>{reactDetails}%</div>
+        <div className="shadow-2xl rounded-2xl mt-5">
+          <div className="grid grid-cols-4 gap-4 pt-6 p-7">
+            <div className="col-span-2 space-y-2">
+              <div className="text-2xl font-semibold py-3">Working Skill</div>
+              <div className="space-y-4">
+                <div>
+                  <div className="text-[#526377]">Web Design</div>
+                  <ProgressBar completed={87} />
                 </div>
-                <input
-                  type="range"
-                  name="react"
-                  value={reactDetails}
-                  onChange={() => {
-                    handleReactChange;
-                  }}
-                />
-              </div>
 
-              <div>
-                <div className="flex justify-between">
-                  <div>JS</div>
-                  <div>{reactDetails}%</div>
+                <div>
+                  <div className="text-[#526377]">React</div>
+                  <ProgressBar completed={90}/>
                 </div>
-                <input
-                  type="range"
-                  name="react"
-                  value={reactDetails}
-                  onChange={() => {
-                    handleReactChange;
-                  }}
-                />
-              </div>
 
-              <div>
-                <div className="flex justify-between">
-                  <div>React</div>
-                  <div>{reactDetails}%</div>
+                <div>
+                  <div className="text-[#526377]">JavaScript</div>
+                  <ProgressBar completed={80} />
                 </div>
-                <input
-                  type="range"
-                  name="react"
-                  value={reactDetails}
-                  onChange={() => {
-                    handleReactChange;
-                  }}
-                />
+
+                <div>
+                  <div className="text-[#526377]">HTML</div>
+                  <ProgressBar completed={91} />
+                </div>
+
+                <div>
+                  <div className="text-[#526377]">CSS</div>
+                  <ProgressBar completed={90} />
+                </div>
               </div>
             </div>
 
             <div className="col-span-2">
-              <div className="text-2xl font-semibold">Knowledges</div>
-              <div className="flex flex-wrap space-x-7">
-                <div  className="bg-[#edf2f2] rounded-xl p-3 ">HTML</div>
-                <div  className="bg-[#edf2f2] rounded-xl p-3">CSS</div>
-                <div  className="bg-[#edf2f2] rounded-xl p-3">Remix</div>
-                <div  className="bg-[#edf2f2] rounded-xl p-3">TypeScript</div>
-                <div  className="bg-[#edf2f2] rounded-xl p-3">Git</div>
-                <div  className="bg-[#edf2f2] rounded-xl p-3">Vercel</div>
-                <div  className="bg-[#edf2f2] rounded-xl p-3">Responsive Design</div>
-
+              <div className="text-2xl font-semibold py-2">Knowledges</div>
+              <div className="flex flex-wrap space-x-4 space-y-2 text-[#526377]">
+                <div className="bg-[#edf2f2] rounded-xl p-3">Remix</div>
+                <div className="bg-[#edf2f2] rounded-xl p-3">TypeScript</div>
+                <div className="bg-[#edf2f2] rounded-xl p-3">Git</div>
+                <div className="bg-[#edf2f2] rounded-xl p-3">Vercel</div>
+                <div className="bg-[#edf2f2] rounded-xl p-3">
+                  Frameworks and Libraries
+                </div>
+                <div className="bg-[#edf2f2] rounded-xl p-3">
+                  Version Control
+                </div>
+                <div className="bg-[#edf2f2] rounded-xl p-3">
+                  Web Performance
+                </div>
+                <div className="bg-[#edf2f2] rounded-xl p-3">
+                  Responsive Web Design
+                </div>
+                <div className="bg-[#edf2f2] rounded-xl p-3">
+                  Browser Developer Tools
+                </div>
+                <div className="bg-[#edf2f2] rounded-xl p-3">
+                  Web Accessibility
+                </div>
+                <div className="bg-[#edf2f2] rounded-xl p-3">
+                  Web Performance
+                </div>
+                <div className="bg-[#edf2f2] rounded-xl p-3">
+                  CSS Preprocessors
+                </div>
+                <div className="bg-[#edf2f2] rounded-xl p-3">RESTful APIs</div>
+                <div className="bg-[#edf2f2] rounded-xl p-3">Testing</div>
+                <div className="bg-[#edf2f2] rounded-xl p-3">
+                  Performance Optimization
+                </div>
+                <div className="bg-[#edf2f2] rounded-xl p-3">Security</div>
+                <div className="bg-[#edf2f2] rounded-xl p-3">
+                  Performance Profiling
+                </div>
               </div>
             </div>
           </div>

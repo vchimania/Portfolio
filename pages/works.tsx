@@ -1,4 +1,4 @@
-import { SquaresPlusIcon } from "@heroicons/react/24/solid";
+import { DocumentMagnifyingGlassIcon, PlusIcon, SquaresPlusIcon, TruckIcon } from "@heroicons/react/24/solid";
 
 export default function Works() {
 
@@ -12,12 +12,12 @@ export default function Works() {
 
         <div className="space-y-5">
           <div  className="flex items-start bg-[#fcf4ff] rounded-2xl p-5">
-            <div className="w-8 text-pink-500 mt-1">
-              <SquaresPlusIcon />
+            <div className="w-12 text-pink-500 mt-1">
+              <TruckIcon />
             </div>
             <div className="ml-3">
               <div className="text-xl font-bold">OTO Capital
-              <span className="text-sm text-gray-400 ml-6"> - Full-time</span>
+              <span className="text-sm text-gray-400 ml-6"> - Fulltime</span>
               </div>
               <div className="text-gray-500 my-2">
                 <ul className="space-y-3">
@@ -106,8 +106,8 @@ export default function Works() {
           </div>
 
           <div className="flex items-start bg-[#fcf4ff] rounded-2xl p-5">
-            <div className="w-8 text-pink-500 mt-1">
-              <SquaresPlusIcon />
+            <div className="w-6 text-pink-500 mt-1">
+              <PlusIcon />
             </div>
             <div className="ml-3">
               <div className="text-xl font-bold">Trukker Technologies
@@ -129,8 +129,8 @@ export default function Works() {
           </div>
 
           <div className="flex items-start bg-[#fcf4ff] rounded-2xl p-5">
-            <div className="w-8 text-pink-500 mt-1">
-              <SquaresPlusIcon />
+            <div className="w-6 text-pink-500 mt-1">
+              <DocumentMagnifyingGlassIcon />
             </div>
             <div className="ml-3">
               <div className="text-xl font-bold">Newton School

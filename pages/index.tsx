@@ -1,4 +1,4 @@
-import { techStats, whatIDo } from "@/src/components/about/helpers";
+import { boxColors, techStats, whatIDo } from "@/src/components/about/helpers";
 import { BoltIcon } from "@heroicons/react/24/solid";
 import Image from "next/image";
 import Slider from "react-slick";
@@ -13,9 +13,9 @@ export default function About() {
         </div>
         <div className="space-y-4 text-gray-500">
           <div>
-            I'm Creative Director and UI/UX Designer from Sydney, Australia,
-            working in web development and print media. I enjoy turning complex
-            problems into simple, beautiful and intuitive designs.
+            I am Creative Person and Frontend Developer from Bangalore working in
+            web development. I enjoy turning complex problems into simple,
+            beautiful and intuitive designs.
           </div>
           <div>
             My aim is to bring across your message and identity in the most
@@ -26,20 +26,22 @@ export default function About() {
 
         <div className="grid grid-cols-2 gap-7">
           {whatIDo.map((i) => (
-            <div className="flex items-start bg-[#fcf4ff] rounded-2xl p-5" key={i.id}>
-              {/* <BoltIcon className="w-8 text-pink-500 mt-1" /> */}
+            <div
+              className={`flex items-start bg-[#fcf4ff] rounded-2xl p-5  ${
+                boxColors[i.id % boxColors.length]
+              }`}
+              key={i.id}
+            >
               <div className="w-8 text-pink-500 mt-1">{i.icon}</div>
               <div className="ml-3">
                 <div className="text-xl font-bold">{i.title}</div>
-                <div className="text-gray-500 my-2">
-                  {i.description}
-                </div>
+                <div className="text-gray-500 my-2">{i.description}</div>
               </div>
             </div>
           ))}
         </div>
 
-        <div className="bg-[#f8fbfb] rounded-2xl p-7 my-7">
+        <div className="rounded-2xl p-7 my-7">
           <div className="text-2xl font-bold">Tech Stack</div>
           <Slider
             {...{
@@ -50,17 +52,17 @@ export default function About() {
               autoplaySpeed: 3000,
               centerMode: true,
               centerPadding: "1px",
-              arrows: false,
+              arrows: true,
               swipeToSlide: true,
             }}
           >
             {techStats.map((i) => (
-              <div className="relative h-56 overflow-hidden my-7 " key={i.id}>
+              <div className="relative h-44 overflow-hidden my-7" key={i.id}>
                 <Image
                   unoptimized
                   layout="fill"
                   src={i.img}
-                  className="mx-6 rounded-2xl w-6"
+                  className="mx-6 rounded-2xl w-6 bg-none"
                   alt="image"
                 />
               </div>
