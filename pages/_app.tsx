@@ -4,8 +4,6 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import ContactDetails from "@/src/components/home/contact-details";
 import SectionsBar from "@/src/components/home/routes-options";
-import { useState } from "react";
-import { MoonIcon } from "@heroicons/react/24/outline";
 
 export default function MyApp({ Component, pageProps }: AppProps) {
 
