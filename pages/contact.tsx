@@ -8,7 +8,7 @@ const ContactForm = () => {
     formState: {},
   } = useForm({});
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e:any) => {
     console.log({ e });
     e.preventDefault();
 
@@ -43,7 +43,7 @@ const ContactForm = () => {
 
         <div className="py-8">
           <div className="text-gray-400 font-semibold text-2xl">
-            I'm always open to discussing product
+            I am always open to discussing product
           </div>
           <div className="text-gray-400 font-semibold text-xl">
             design work or partnerships.
